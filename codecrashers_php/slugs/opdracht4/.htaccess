@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /codecrashers-REA-/PHP/14-slugs/opdracht4/
+
+# RewriteRule voor pagina's met meertalige URL's
+RewriteRule ^([a-zA-Z]+)/([a-zA-Z]+)/?$ index.php?page=$1&lang=$2 [L,QSA]
+
