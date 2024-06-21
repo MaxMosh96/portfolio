@@ -1,0 +1,230 @@
+/*  Dit bestand heb ik aangemaakt om bestaande CSS code beter te organiseren zonder alle voortgang te verliezen,
+    in de hoop dat de geschreven code voor ons beide zo overzichtelijk mogelijk blijft. Als je merkt dat dit bestand
+    en het CSS-hoofdbestand (styles.css) er hetzelfde uitzien, dan betekent dat dat ik via dit bestand een efficiëntere
+    manier heb gevonden om de code zo kort en bondig mogelijk te schrijven. Zoals je misschien kunt zien heb ik kleur bij kleur
+    georganiseerd en ben ik van plan om het ene onderdeel af te maken voordat ik naar het volgende ga. Dit maakt het allemaal een stuk
+    makkelijker te lezen, ook voor mij. */
+
+
+/* Ons gekozen kleurenpalet. */
+
+:root {
+    --groen: #66dd6a;
+    --bruin: #795548;
+    --blauw: #2196f3;
+    --geel: #ffeb3b;
+    --grijs: #9e9e9e;
+}
+
+/* Algemene indeling van html en de standaardeigenschappen die alle elementen daarin automatisch meekrijgen (* staat voor alle elementen op een pagina). */
+
+html, * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* De eerste letter van elke tekst binnen elk element krijgt altijd automatisch een hoofdletter, tenzij anders gespecificeerd. */
+
+*::first-letter {
+    text-transform: capitalize;
+}
+
+header {
+    height: 50vh;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+}
+
+header section {
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color: #000;
+}
+
+header section div {
+    margin: 0rem 5rem;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+}
+
+header section div:nth-child(2) {
+    gap: 1.25rem;
+}
+
+header section div i, header section div a {
+    font-size: 20px;
+    height: inherit;
+    text-decoration: none;
+    color: #fff;
+}
+
+header section div i:hover {
+    cursor: pointer;
+}
+
+nav {
+    width: 100%;
+    height: 30vh;
+    box-shadow: 1px 1px 1px 1px var(--grijs);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav, nav section, nav section ul, nav section ul li,
+nav section ul li a, nav section a {
+    text-shadow: 2px 1px 1px #000;
+    font-size: 25px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav section {
+    width: 100%;
+    background-color: var(--groen);
+    display: flex;
+}
+
+nav .main-head {
+    height: 30%;
+    border-bottom: 2.5px groove var(--grijs);
+    justify-content: space-between;
+}
+
+nav .main-head .nav-menu-left, nav .main-head .nav-menu-right {
+    width: 30%;
+    margin: 0rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .main-head .nav-menu-left {
+    padding: 0rem 0.75rem;
+}
+
+nav .main-head .nav-menu-left li {
+    padding: 1rem 0.5rem;
+}
+
+nav .main-head .nav-menu-left li.active {
+    background-color: var(--bruin);
+}
+
+nav .main-head .nav-menu-left li:hover, nav .main-head .nav-menu-left li a:hover {
+    background-color: var(--bruin);
+}
+
+nav .main-head .nav-menu-left li:hover {
+    cursor: pointer;
+}
+
+nav .main-head .nav-menu-right ul {
+    padding: 0.5rem 0rem;
+    display: flex;
+    justify-content: center;
+}
+
+nav .main-head ul, nav .main-head form {
+    width: 30%;
+}
+
+nav .main-head ul {
+    list-style-type: none;
+}
+
+nav .main-head form select {
+    width: 100%;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+}
+
+nav .linked-logo {
+    height: 70%;
+    justify-content: center;
+}
+
+nav .linked-logo a {
+    font-size: 50px;
+    gap: 1rem;
+    text-shadow: 5px 1px 1px #000;
+    width: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .linked-logo a h1 {
+    padding: 0.5rem;
+}
+
+nav .linked-logo i, nav .linked-logo span {
+    color: var(--geel);
+}
+
+body, body main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+body .landing-page {
+    background-image: url('../img/soil-2.jpg');
+}
+
+body .about-us {
+    background-image: url('../img/waterfall.jpg');
+}
+
+body .contact {
+    background-image: url('../img/soil.jpg');
+}
+
+body .contact form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+body .contact form input {
+    width: 45%;
+    background: var(--grijs);
+    color: #fff;
+}
+
+body main {
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body main h2 {
+    width: 100%;
+    font-size: 75px;
+    text-shadow: 5px 1px 1px #000;
+}
+
+body main p {
+    font-size: 40px;
+    text-shadow: 3px 1px 1px #000;
+}
+
+body main h2 span {
+    color: var(--geel);
+}

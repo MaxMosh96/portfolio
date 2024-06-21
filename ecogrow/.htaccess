@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteBase /ecogrow
+
+# RewriteRule voor pagina's met meertalige URL's
+RewriteRule ^([a-zA-Z]+)/([a-zA-Z]+)/?$ index.php?page=$1&lang=$2 [L,QSA]

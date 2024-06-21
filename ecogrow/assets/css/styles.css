@@ -1,0 +1,349 @@
+/* Ons gekozen kleurenpalet */
+
+:root {
+    --groen: #66dd6a;
+    --bruin: #795548;
+    --blauw: #2196f3;
+    --geel: #ffeb3b;
+    --grijs: #9e9e9e;
+}
+
+/* Verwijdering van margins en andere standaard inspringingen van elementen over de gehele html structuur */
+
+html, * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Begin over het gehele document altijd alles met een hoofdletter (de * verwijst naar elk element in een pagina) */
+
+*::first-letter {
+    text-transform: capitalize;
+}
+
+/* Styling van de body om een preciezere positionering van elementen te verkrijgen */
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    height: 50vh;
+}
+
+nav {
+    width: 100%;
+    height: 30vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 1px 1px var(--grijs);
+    color: #fff;
+    font-weight: bold;
+    font-size: 25px;
+    text-shadow: 2px 1px 1px #000;
+}
+
+nav section {
+    background-color: var(--groen);
+}
+
+nav section {
+    width: 100%;
+}
+
+nav .main-head {
+    display: flex;
+    height: 30%;
+    justify-content: space-between;
+    border-bottom: 2.5px groove var(--grijs);
+}
+
+nav .linked-logo {
+    display: flex;
+    height: 70%;
+    justify-content: center;
+}
+
+nav .linked-logo a {
+    width: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 50px;
+    gap: 1rem;
+    text-shadow: 5px 1px 1px #000;
+}
+
+nav .linked-logo a h1 {
+    padding: .5rem;
+}
+
+nav .linked-logo i, .linked-logo span {
+    color: var(--geel);
+}
+
+header .top {
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color: #000;
+}
+
+header .top div {
+    display: flex;
+    justify-content: center;
+    margin: 0 5rem;
+    font-size: 17px;
+}
+
+header .top div:nth-child(2) {
+    gap: 1.25rem;
+}
+
+header .top div i {
+    font-size: 20px;
+}
+
+header .top div i:hover {
+    cursor: pointer;
+}
+
+header .top div a, header .top div i {
+    text-decoration: none;
+    height: inherit;
+    color: #fff;
+}
+
+header div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .logo-link {
+    width: 30%;
+    display: flex;
+}
+
+nav .nav-menu-left, nav .nav-menu-right {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    margin: 0rem .5rem;
+}
+
+nav .nav-menu-left {
+    justify-content: center;
+    padding: 0rem 0.75rem;
+}
+
+nav .nav-menu-left li {
+    padding: 1rem .5rem;
+}
+
+/* De elementen binnen .nav-menu-right krijgen een padding zodat de elementen erbinnen niet een onvolledig uiterlijk krijgen */
+
+nav .nav-menu-right ul, nav .nav-menu-right form {
+    padding: .5rem 0rem;
+}
+
+/* De linkjes binnen de ul van .nav-menu-right hebben zelf geen padding omdat de box waar ze in zitten groot genoeg is om volledig te worden weergegeven */
+
+nav .nav-menu-right ul a {
+    padding: 0;
+}
+
+nav .nav-menu-right {
+    justify-content: center;
+    align-items: center;
+}
+
+nav .nav-menu-right form select {
+    width: 100%;
+}
+
+nav ul, nav form {
+    width: 30%;
+}
+
+/* De elementen .social-menu en .inbox moeten flexboxen zijn om de items die erin staan preciezer/netter en volgens een bepaalde volgorde weer te geven */
+
+nav .social-menu, nav .inbox {
+    display: flex;
+    justify-content: center;
+}
+
+nav .nav-menu-right .inbox {
+    gap: .35rem;
+}
+
+/* Linkjes naar andere bronnen (zoals Facebook of Instagram) hebben standaard een witte kleur, net als de rest van alle tekst op de pagina */
+
+nav .nav-menu-right .social-menu a, nav .nav-menu-right .inbox a {
+    color: #fff;
+}
+
+/* De hoverkleur van linkjes is onze bruine kleur in het palet */
+
+.top div a:hover, nav .nav-menu-right .inbox a:hover, .nav-menu-right .social-menu a:hover, nav .nav-menu-right form select option:hover {
+    color: var(--bruin);
+}
+
+.top div:hover > .top div i {
+    color: var(--bruin);
+}
+
+nav .nav-menu-right .inbox a:hover {
+    cursor: pointer;
+}
+
+/* De standaard-onderstreping van linkjes (a) kan worden weggelaten */
+
+nav .logo-link {
+    text-decoration: none;
+}
+
+/* Hetgene van de verwijzing wat mensen zullen zien (de h1) en de styling hiervan */
+
+nav .logo-link h1 {
+    float: right;
+    width: 50%;
+    color: #fff;
+    font-size: 25px;
+}
+
+/* Grootte van het icoontje (i) in het .logo-link element */
+
+nav .logo-link i {
+    float: left;
+    width: 10%;
+}
+
+/* Kleur van de span van de h1 en het icoontje in de a (anchor) box */
+
+nav .logo-link h1 span, nav .logo-link i {
+    color: var(--geel);
+}
+
+/* De subelementen van de ul worden in het midden weergegeven (center/gecentreerd) en de li's hebben geen speciale markering  */
+
+nav ul {
+    list-style-type: none;
+}
+
+/* Lengte en breedte van menu-items (home/over ons/contact) binnen de ul in het midden */
+
+/* nav ul li {
+    height: 100%;
+    width: 25%;
+    padding: 20vh 0vh;
+} */
+
+/* Geef het huidige item van het navigatiemenu als bruin weer, en maak het item waarover gehoverd word ook bruin */
+
+nav .nav-menu-left li.active, nav .nav-menu-left li:hover, nav .nav-menu-left li a:hover {
+    background-color: var(--bruin);
+}
+
+/* Verander de muis naar een wijsvinger als er over menuitems word gehoverd */
+
+nav .nav-menu-left li:hover, nav .nav-menu-left li a:hover {
+    cursor: pointer;
+}
+
+/* Haal de onderstreping weg bij linkjes en maak de tekstkleur wit */
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* De select in de form, oftewel het dropdownmenu */
+
+nav form select {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+}
+
+/* Hoofddivs van de verschillende pagina's (denk aan home en over ons) */
+
+.landing-page, .about-us, .contact {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-page {
+    background-image: url('../img/soil-2.jpg');
+}
+
+.about-us {
+    background-image: url('../img/waterfall.jpg');
+}
+
+.contact {
+    background-image: url('../img/soil.jpg');
+}
+
+/* Formulier om contact op te nemen met het bedrijf, op de contactpagina */
+
+.contact form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Alle velden binnenin het formulier waar de gebruikers mee kunnen interacteren (inputs) en dus informatie in kunnen stoppen, denk aan een veld om je voornaam in te typen */
+
+.contact form input {
+    width: 45%;
+    background: var(--grijs);
+    color: #fff;
+}
+
+/* De headings van elke pagina */
+
+.landing-page h2, .about-us h2 {
+    width: 100%;
+    font-size: 75px;
+    text-shadow: 5px 1px 1px #000;
+}
+
+/* De paragrafen (dus kleinere tekst) van elke pagina */
+
+.landing-page p, .about-us p {
+    font-size: 40px;
+    text-shadow: 3px 1px 1px #000;
+}
+
+/* Iets om weer het logo doormidden van kleur te laten veranderen */
+
+.landing-page h2 span {
+    color: var(--geel);
+}
